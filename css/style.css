@@ -147,7 +147,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 17px;
-    width: 760px;
+    width: 770px;
 }
 
 .news {
@@ -207,7 +207,7 @@ body {
 .new-top {
     font-family: open-sans-b, sans-serif;
     font-size: 14px;
-    padding-bottom: 46px;
+    /*padding-bottom: 46px;*/
     text-align: center;
     text-transform: uppercase;
 }
@@ -344,7 +344,6 @@ body {
     text-transform: uppercase;
     font-size: 14px;
     margin-top: 60px;
-    margin-bottom: 45px;
 }
 
 .theme {
@@ -385,7 +384,8 @@ body {
 .product {
     width: 345px;
     box-sizing: border-box;
-    height: 437px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .product:nth-child(1) {
@@ -400,6 +400,9 @@ body {
 }
 
 .products-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     position: relative;
     width: 340px;
     top: -54px;
@@ -408,7 +411,7 @@ body {
     padding-right: 21px;
     padding-top: 56px;
     padding-bottom: 70px;
-    border: 3px solid #d5c9a3;
+    border: 3px solid #d5c9a3;;
 }
 
 .product-paragraph {
@@ -430,7 +433,7 @@ body {
 .price-line {
     margin-top: -25px;
     margin-bottom: 5px;
-}
+ }
 .old-price{
     font-family: open-sans-b, sans-serif;
     font-size: 14px;
@@ -469,7 +472,7 @@ body {
 .footer-address {
     margin-bottom: 20px;
     background-color: #f4f7f6;
-    padding 30px 0;
+    padding: 30px 0;
 }
 
 .footer-list {
@@ -522,17 +525,24 @@ body {
     color: #999999;
 }
 /*-----------------trends---------------------------*/
+.border_bottom {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -30px;
+    font-size: 40px;
+    color: #e1d9bd;
+}
+
 .trends_h2 {
     text-align: center;
     margin-top: 64px;
-    margin-bottom: 46px;
     font-family: open-sans-b, sans-serif;
     font-size: 20px;
     text-transform: uppercase;
 }
 
 .trends-container {
-
     display: flex;
     width: 100%;
     min-height: 320px;
@@ -605,6 +615,7 @@ body {
 }
 
 .trend_border {
+    width: 100%;
     padding-top: 41px;
     padding-left: 36px;
     padding-right: 36px;
@@ -623,7 +634,7 @@ body {
     color: #ffffff;
 }
 
-@media (min-width: 568px) and (max-width: 768px) {
+@media (min-width: 641px) and (max-width: 1200px) {
     .footer {
         margin-top: 110px;
     }
@@ -709,14 +720,11 @@ body {
         flex: 0 1 100%;
         gap: 15px;
         border-bottom: 1px solid #eeeeee;
+        padding-bottom: 20px;
     }
 
     .news:not(:first-child) {
         margin-top: 40px;
-    }
-
-    .main-image {
-        width: 100%;
     }
 
     .page-wrapper {
@@ -724,7 +732,7 @@ body {
     }
 
     .main {
-        width: 390px;
+        flex-grow: 1;
     }
 
     .new-top-aside {
@@ -758,9 +766,12 @@ body {
         margin-top: 55px;
         margin-left: 25px;
     }
+    .price-line {
+
+    }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 640px) {
 
     .menu-burger {
         position: relative;
@@ -824,13 +835,13 @@ body {
     }
 
     .main {
-        width: 331px;
-        margin-right: auto;
-        margin-left: auto;
+        width: 100%;
+        margin-right: 15px;
+        margin-left: 15px;
     }
 
     .main-image {
-        width: 331px;
+        width: 100%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -844,12 +855,12 @@ body {
     .aside-item {
         margin-right: auto;
         margin-left: auto;
-        width: 331px;
+        width: 100%;
         margin-top: 70px;
     }
 
     .aside {
-        width: 331px;
+        width: 100%;
     }
 
     .search-field {
@@ -987,7 +998,7 @@ body {
 }
 /*------------------POPUP---------------------*/
 .popup {
-    visibility: hidden;
+    /*visibility: hidden;*/
     position: fixed;
     left: 0;
     top: 0;
@@ -1013,7 +1024,6 @@ body {
 .popup-box {
     box-sizing: border-box;
     width: 391px;
-    height: 630px;
     position: relative;
     z-index: 2;
     background-color: white;
@@ -1031,48 +1041,47 @@ body {
     margin-bottom: 50px;
 }
 
-.form-hint {
+.popup-row {
     display: block;
     margin-bottom: 11px;
+    margin-top: 35px;
 }
 
-.form-row {
+.popup-form {
     margin-bottom: 37px;
 }
 
-.fieldp {
-    width: 330px;
+.popup-field {
+    width: 100%;
     height: 48px;
     background-color: #f3f7f6;
     border: none;
     padding-left: 18px;
-    background-image: url("../svg/form-arrows.svg");
+    background-image: url("https://raw.githubusercontent.com/netology-code/mq-diploma/1ad0703d75efaafe9fb70e8a32f7ecf69bfb40f4/sources/svg/form-arrows.svg");
     background-size: 14px;
     background-repeat: no-repeat;
     background-position: right 5px center;
-
-
+    -webkit-appearance: none;
+    -moz-apprarance: none;
+    color: #828483;
 }
 
-.fieldh{
-    max-height: 130px;
+.popup-hint {
     min-height: 130px;
-    max-width: 330px;
-    min-width: 330px;
+    width: 100%;
     padding-top: 18px;
     font-family: inherit;
     background-image: none;
 }
 
-.button-form {
+.popup-button {
     margin-top: 25px;
-    width: 330px;
+    width: 100%;
     height: 48px;
-    margin-bottom: 58px;
     border: none;
     background-color: #b69f5b;
     font-size: 20px;
-    font-family: open-sans-r, sans-serif;
+    font-family: open-sans-b, sans-serif;
     color: white;
     text-transform: uppercase;
 }
@@ -1107,6 +1116,7 @@ body {
     height: 1px;
     width: 1px;
 }
+
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </footer>

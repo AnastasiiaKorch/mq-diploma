@@ -49,13 +49,15 @@
 <div class="popup popup-active" hidden>
     <div class="popup-box">
         <header class="popup-header">Ваш фидбек
+            <span class="border_bottom">____</span>
         </header>
-        <form class="form-row">
-            <span class="form-hint">Как часто вы заходите на сайт?</span>
-            <input type="text" class="fieldp" placeholder="Почти каждый день">
-        </form>
-        <div class="form-row">
-            <span class="form-hint">Вы подписаны на e-mail рассылку?</span>
+        <form class="popup-form">
+            <span class="popup-row">Как часто вы заходите на сайт?</span>
+            <select class="popup-field">
+                <option>Почти каждый день</option>
+            </select>
+        <div class="popup-form">
+            <span class="popup-row">Вы подписаны на e-mail рассылку?</span>
             <label class="radio-group">
                 <input type="radio" class="radio" name="radio-group">
                 <span class="radio-group-text">Да</span>
@@ -65,18 +67,18 @@
                 <span class="radio-group-text">Нет</span>
             </label>
         </div>
-        <form class="form-row2">
-            <span class="form-hint">Расскажите, какой контент вы бы хотели видеть на нашем сайте?</span>
-            <textarea type="text" class="fieldp fieldh" placeholder="Может, больше рецептов?"></textarea>
+
+            <span class="popup-row">Расскажите, какой контент вы бы хотели видеть на нашем сайте?</span>
+            <textarea type="text" class="popup-field popup-hint" placeholder="Может, больше рецептов?"></textarea>
         </form>
-        <button class="button-form" type="button">Отправить</button>
+        <button class="popup-button" type="button">Отправить</button>
     </div>
 </div>
 
 <!----------------------------------------trends----------------------------------->
 
 <h2 class="trends_h2"> Сейчас в тренде</h2>
-
+<span class="border_bottom">____</span>
 <section class="trends-container">
 
     <div class="trend garden_trend">
@@ -85,7 +87,7 @@
                 <li class="trend_tags_item"><a class="trend_tags_link" href="#0">Lifestyle</a></li>
                 <li class="trend_tags_item"><a class="trend_tags_link" href="#0">Interior</a></li>
             </ul>
-            <h3 class="trend-text">Сейчас в тренде: сад<br> на подоконнике</h3>
+            <h3 class="trend-text">Сейчас в тренде: сад на подоконнике</h3>
         </div>
     </div>
 
@@ -338,7 +340,7 @@
                 <a class="new-top-aside-link" href="#0">
                     <h2 class="new-top">новые посты</h2>
                 </a>
-
+                <span class="border_bottom">____</span>
                 <article class="new">
                     <a class="new-img" href="#0">
                         <img src="images/2.jpg" alt="пляж мини фото" width="70"></a>
@@ -437,7 +439,7 @@
 
                 <section class="section-mailing">
                     <h3 class="mailing">Рассылка</h3>
-
+                    <span class="border_bottom">____</span>
                     <form class="e-mail">
                         <div>
                             <label class="e-mail-group">
@@ -454,6 +456,7 @@
 
                 <section>
                     <h3 class="tags">Теги</h3>
+                    <span class="border_bottom">____</span>
                     <ul class="tags-list">
                         <li class="tag-list-item">
                             <a class="tag-list-link" href="#0">Fashion</a>
@@ -482,6 +485,7 @@
                     </ul>
 
                     <h3 class="theme-top">Темы</h3>
+                    <span class="border_bottom">____</span>
                     <ul class="theme">
                         <li class="theme-item">
                             <a class="theme-link" href="#0">Красота</a><span class="theme-span"> 12</span>
@@ -508,6 +512,7 @@
 </div>
 <!-----------------------------------------------------products---------------------------------->
 <h2 class="header-products">Наши изделия</h2>
+<span class="border_bottom">____</span>
 <div class="products-wrapper">
 
     <div class="product product_1">
@@ -520,10 +525,11 @@
         <div class="products-text">
             <h3 class="product-header">Подушки на диван</h3>
             <p class="product-paragraph">Набор из двух подушек с модными принтами. Видео о создании <a class="products-links" href="#0">здесь. </a>
+            <div class="price">
             <p class="old-price">1000 Р</p>
             <p class="price-line">_______</p>
-            <div class="price-btn">
-                <p class="new-price">800</p>
+            <p class="new-price">800</p></div>
+            <div class="button">
                 <button class="button-buy" type="button">В магазин</button>
             </div>
         </div>
@@ -538,8 +544,9 @@
         <div class="products-text">
             <h3 class="product-header">Кукла "зайчик"</h3>
             <p class="product-paragraph">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена<a class="products-links" href="#0"> весенняя серия постов</a> и несколько подкастов.</p>
-            <div class="price-btn">
-                <p class="new-price">3500 Р</p>
+            <div class="price">
+                <p class="new-price">3500 Р</p></div>
+            <div class="button">
                 <button class="button-buy" type="button">В магазин</button>
             </div>
         </div>
@@ -556,11 +563,14 @@
         <div class="products-text">
             <h3 class="product-header">Шестиугольная рамка</h3>
             <p class="product-paragraph">Необычная рамка для украшения дома из видео <a class="products-links" href="#0">«Как сделать рамку из подручных средств за 30 минут»</a>
+            <div class="price">
             <p class="old-price">500 P</p>
+
             <p class="price-line">_____</p>
             <div class="price-btn">
-                <p class="new-price">400</p>
-                <button class="button-buy" type="button">В магазин</button>
+                <p class="new-price">400</p></div>
+                <div class="button">
+               <button class="button-buy" type="button">В магазин</button>
             </div>
         </div>
     </div>
