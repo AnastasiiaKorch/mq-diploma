@@ -998,7 +998,7 @@ body {
 }
 /*------------------POPUP---------------------*/
 .popup {
-    /*visibility: hidden;*/
+    visibility: hidden;
     position: fixed;
     left: 0;
     top: 0;
